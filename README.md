@@ -1,11 +1,11 @@
-#Unix_assignment
+# Unix_assignment
 
-##Data Inspection
+## Data Inspection
 
-###Attributes of fang_et_al_genotypes.txt and snp_position.txt
+### Attributes of fang_et_al_genotypes.txt and snp_position.txt
 </> Bash
-ls -lh fang_et_al_genotypes.txt snp_position.txt
-du -h fang_et_al_genotypes.txt snp_position.txt
+`ls -lh fang_et_al_genotypes.txt snp_position.txt`
+`du -h fang_et_al_genotypes.txt snp_position.txt`
 head snp_position.txt
 head fang_et_al_genotypes.txt
 wc -l fang_et_al_genotypes.txt
@@ -16,7 +16,7 @@ awk -F "\t" '{print NF; exit}' snp_position.txt
 -**fang_et_al_genotypes.txt:**File Size: 11 MB; Number of Lines: 2783; Number of Columns: 986 
 -**snp_position.txt:**File Size: 81 KB; Number of Lines: 984; Number of Columns: 15 
 
-##Data Processing
+## Data Processing
 **Step 01** *Separate maize and teosinte samples from the fang_et_al_genotypes.txt 
 </> Bash
 awk 'NR==1 || $3 ~ /ZMMIL|ZMMLR|ZMMMR/' fang_et_al_genotypes.txt > maize_genotypes.txt
